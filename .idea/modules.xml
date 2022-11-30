@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/after-1/after-1.iml" filepath="$PROJECT_DIR$/after-1/after-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-1/clase-1.iml" filepath="$PROJECT_DIR$/clase-1/clase-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-2/clase-2.iml" filepath="$PROJECT_DIR$/clase-2/clase-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-3/clase-3.iml" filepath="$PROJECT_DIR$/clase-3/clase-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-4/clase-4.iml" filepath="$PROJECT_DIR$/clase-4/clase-4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-5/clase-5.iml" filepath="$PROJECT_DIR$/clase-5/clase-5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clase-6/clase-6.iml" filepath="$PROJECT_DIR$/clase-6/clase-6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-coderhouse-41020.iml" filepath="$PROJECT_DIR$/java-coderhouse-41020.iml" />
+    </modules>
+  </component>
+</project>
