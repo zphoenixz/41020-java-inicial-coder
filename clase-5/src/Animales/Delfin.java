@@ -1,6 +1,14 @@
 package Animales;
 
 public class Delfin extends Animal{
+    public Delfin(String raza, String apodo, String tipoDeAgua) {
+        super(raza);
+        this.apodo = apodo;
+        this.tipoDeAgua = tipoDeAgua;
+    }
+    public Delfin() {
+        super("raza");
+    }
     public Delfin(String raza) {
         super(raza);
     }
@@ -16,6 +24,11 @@ public class Delfin extends Animal{
     @Override
     public void hacerSonido(){
         System.out.println("titrirtiritr!");
+    }
+
+    @Override
+    public boolean esAnimalDeTierra(int bafdgasfdg, String aqwaerwqe) {
+        return false;
     }
 
     // Agregar los getter and setters

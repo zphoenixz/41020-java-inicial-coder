@@ -1,6 +1,7 @@
-package org.example.demo;
+package org.example.demo2;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,8 +32,12 @@ public class Cliente {
     @Column(name = "DNI")
     private long dni;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Domicilio> domicilio;
+
+    public Cliente() {
+    }
 
     public Cliente(long id, String nombre, String apellido, long dni, List<Domicilio> domicilio) {
         this.id = id;
@@ -98,5 +103,16 @@ public class Cliente {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getNombre(), getApellido(), getDni(), getDomicilio());
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", dni=" + dni +
+                ", domicilio=" + domicilio +
+                '}';
     }
 }

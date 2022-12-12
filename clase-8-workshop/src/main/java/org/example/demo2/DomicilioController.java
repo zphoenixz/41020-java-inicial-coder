@@ -1,15 +1,13 @@
-package org.example.demo;
+package org.example.demo2;
 
-import org.example.demo.Repositories.ClienteRepository;
-import org.example.demo.Repositories.DomicilioRepository;
+import org.example.demo2.Repositories.ClienteRepository;
+import org.example.demo2.Repositories.DomicilioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 @RestController
@@ -24,6 +22,7 @@ public class DomicilioController {
     //http://localhost:8080/domicilio/crear1
     @GetMapping(value = "crear1")
     public ResponseEntity<?> crearDomicilio1() {
+
         Long clienteId = 1L;
         Cliente clienteUno = clienteRepository.getReferenceById(clienteId);
 
@@ -37,8 +36,10 @@ public class DomicilioController {
                 "Salta",
                 clienteUno
         );
+        Domicilio domilicioCreado = domicilioRepository.save(domicilio);
 
-        return ResponseEntity.ok(domicilioRepository.save(domicilio));
+        return ResponseEntity.ok(domilicioCreado);
+
     }
 
     //http://localhost:8080/domicilio/crear2
@@ -61,26 +62,11 @@ public class DomicilioController {
         return ResponseEntity.ok(domicilioRepository.save(domicilio));
     }
 
-
-
-//    //READ -------------------------
-//    //http://localhost:8080/alumno/leer/12345
-//    @GetMapping(value = "alumno/leer/{dni}")
-//    public ResponseEntity<?> obtenerAlumnosPorDNI(@PathVariable(name = "dni") final Long dni) {
-//        return ResponseEntity.ok(clienteRepository.getReferenceById(dni));
-//    }
-//    //http://localhost:8080/alumno/leer/todos
-//    @GetMapping(value = "alumno/leer/todos")
-//    public ResponseEntity<?> obtenerTodosLosAlumnos() {
-//        return ResponseEntity.ok(clienteRepository.findAll());
-//    }
-//
-//    //READ -------------------------
-//    //http://localhost:8080/alumno/actualizar/12345
-//    @GetMapping(value = "alumno/actualizar/{dni}")
-//    public ResponseEntity<?> actualizarNombrePorDNI(@PathVariable(name = "dni") final Long dni) {
-//        Alumno alumno = clienteRepository.getReferenceById(dni);
-//        alumno.setNombre("NombreNuevo");
-//        return ResponseEntity.ok(clienteRepository.save(alumno));
-//    }
+    //READ -------------------------
+    //http://localhost:8080/domicilio/leer/1
+    @GetMapping(value = "leer/{id}")
+    public ResponseEntity<?> obtenerDomicilioPorID(@PathVariable(name = "id") final Long id) {
+        Domicilio domicilioBuscado = domicilioRepository.getReferenceById(id);
+        return ResponseEntity.ok(domicilioBuscado);
+    }
 }

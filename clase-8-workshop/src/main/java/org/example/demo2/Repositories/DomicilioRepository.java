@@ -1,7 +1,7 @@
-package org.example.demo.Repositories;
+package org.example.demo2.Repositories;
 
 
-import org.example.demo.Domicilio;
+import org.example.demo2.Domicilio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

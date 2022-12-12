@@ -17,7 +17,6 @@ public class Gato extends Animal{
         this.apodo = apodo;
     }
 
-
     public String getApodo() {
         return apodo;
     }

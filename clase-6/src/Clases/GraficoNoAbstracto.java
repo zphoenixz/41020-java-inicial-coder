@@ -1,9 +1,19 @@
-package Abstractas;
+package Clases;
 
-public abstract class Grafico {
+public class GraficoNoAbstracto {
     int x,y ;
+    public GraficoNoAbstracto(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+
     void moverA(int x, int y){}
-    abstract void dibujar();
-    abstract void cambiarTamanio();
+    void dibujar(){
+
+    }
+    void cambiarTamanio(){
+
+    }
 }
 

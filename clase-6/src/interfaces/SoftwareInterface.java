@@ -1,2 +1,5 @@
-package interfaces;public class SoftwareInterface {
+package interfaces;
+
+public interface SoftwareInterface {
+    void encenderMonitor();
 }

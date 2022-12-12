@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Botonesñ {
+public interface Botones {
     void ajustarVolumen(int intesidad);
     String cambiarCanal(int numero);
     boolean cambiarEstadoDeEncendido(boolean nuevoEstado);

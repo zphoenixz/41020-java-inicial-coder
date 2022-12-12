@@ -1,5 +1,6 @@
-package org.example.demo;
+package org.example.demo2;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,8 +42,13 @@ public class Domicilio {
     @Column(name = "PROVINCIA")
     private String provincia;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+
+    @JsonBackReference(value = "cliente")
+    @ManyToOne(fetch = FetchType.EAGER)
     private Cliente cliente;
+
+    public Domicilio() {
+    }
 
     public Domicilio(String calle, int numero, int piso, String departamento, String cp, String localidad, String provincia, Cliente cliente) {
         this.calle = calle;
@@ -143,11 +149,26 @@ public class Domicilio {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Domicilio domicilio)) return false;
-        return id == domicilio.id && numero == domicilio.numero && piso == domicilio.piso && Objects.equals(calle, domicilio.calle) && Objects.equals(departamento, domicilio.departamento) && Objects.equals(cp, domicilio.cp) && Objects.equals(localidad, domicilio.localidad) && Objects.equals(provincia, domicilio.provincia) && Objects.equals(cliente, domicilio.cliente);
+        return getId() == domicilio.getId() && getNumero() == domicilio.getNumero() && getPiso() == domicilio.getPiso() && Objects.equals(getCalle(), domicilio.getCalle()) && Objects.equals(getDepartamento(), domicilio.getDepartamento()) && Objects.equals(getCp(), domicilio.getCp()) && Objects.equals(getLocalidad(), domicilio.getLocalidad()) && Objects.equals(getProvincia(), domicilio.getProvincia()) && Objects.equals(getCliente(), domicilio.getCliente());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, calle, numero, piso, departamento, cp, localidad, provincia, cliente);
+        return Objects.hash(getId(), getCalle(), getNumero(), getPiso(), getDepartamento(), getCp(), getLocalidad(), getProvincia(), getCliente());
+    }
+
+    @Override
+    public String toString() {
+        return "Domicilio{" +
+                "id=" + id +
+                ", calle='" + calle + '\'' +
+                ", numero=" + numero +
+                ", piso=" + piso +
+                ", departamento='" + departamento + '\'' +
+                ", cp='" + cp + '\'' +
+                ", localidad='" + localidad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", cliente=" + cliente +
+                '}';
     }
 }

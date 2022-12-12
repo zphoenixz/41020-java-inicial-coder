@@ -13,6 +13,16 @@ public class Animal {
         System.out.println("Sonido!!!!");
     }
 
+    public boolean esAnimalDeTierra(int a, String b){
+        return true;
+    }
+    public boolean esAnimalDeTierra(int a){
+        return true;
+    }
+    public boolean esAnimalDeTierra(){
+        return true;
+    }
+
     public void correr(){
         System.out.println("Corre y se cae");
     }

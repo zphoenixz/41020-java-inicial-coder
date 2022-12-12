@@ -1,4 +1,5 @@
 package interfaces;
 
-public class SoftwareInterface {
+public interface HardwareInterface {
+    void proveerDeEnergia();
 }
