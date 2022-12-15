@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="clase-9-rest-api-1" />
         <module name="clase-8-workshop" />
+        <module name="demo" />
         <module name="clase-7-spring-1" />
       </profile>
     </annotationProcessing>
@@ -15,6 +17,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="clase-7-spring-1" options="-parameters" />
       <module name="clase-8-workshop" options="-parameters" />
+      <module name="clase-9-rest-api-1" options="-parameters" />
+      <module name="demo" options="-parameters" />
     </option>
   </component>
 </project>
