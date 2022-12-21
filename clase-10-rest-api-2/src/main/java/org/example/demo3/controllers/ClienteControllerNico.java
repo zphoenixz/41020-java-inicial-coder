@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/cliente")
-public class ClienteControllerRami {
+public class ClienteControllerNico {
     @Autowired
     private ClienteRepository clienteRepository;
 
