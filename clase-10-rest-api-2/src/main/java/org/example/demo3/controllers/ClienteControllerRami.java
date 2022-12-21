@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,6 +40,14 @@ public class ClienteControllerRami {
     //http://localhost:8080/cliente/leer/1
     @GetMapping(value = "leer/{id}")
     public ResponseEntity<?> obtenerClientePorID(@PathVariable(name = "id") final Long id) {
+        Cliente clienteBuscado = clienteRepository.getReferenceById(id);
+        return ResponseEntity.ok(clienteBuscado);
+    }
+
+    //Put -------------------------
+    //http://localhost:8080/cliente/leer/1
+    @PutMapping(value = "leer/{id}")
+    public ResponseEntity<?> actualizarClientePorID(@PathVariable(name = "id") final Long id) {
         Cliente clienteBuscado = clienteRepository.getReferenceById(id);
         return ResponseEntity.ok(clienteBuscado);
     }
