@@ -7,6 +7,7 @@ import org.example.demo3.requests.ClienteRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,5 +42,13 @@ public class ClienteControllerNico {
     public ResponseEntity<?> obtenerClientePorID(@PathVariable(name = "id") final Long id) {
         Cliente clienteBuscado = clienteRepository.getReferenceById(id);
         return ResponseEntity.ok(clienteBuscado);
+    }
+
+    //READ -------------------------
+    //http://localhost:8080/cliente/leer/1
+    @DeleteMapping(value = "leer/{id}")
+    public ResponseEntity<?> borrarClientePorID(@PathVariable(name = "id") final Long id) {
+         clienteRepository.deleteById(id);
+        return ResponseEntity.ok("Cliente Borrado");
     }
 }
