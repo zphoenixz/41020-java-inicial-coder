@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="clase-9-rest-api-1" />
         <module name="clase-10-rest-api-2" />
+        <module name="clase-13-rest-template" />
         <module name="clase-8-workshop" />
         <module name="demo" />
         <module name="clase-7-spring-1" />
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="clase-10-rest-api-2" options="-parameters" />
+      <module name="clase-13-rest-template" options="-parameters" />
       <module name="clase-7-spring-1" options="-parameters" />
       <module name="clase-8-workshop" options="-parameters" />
       <module name="clase-9-rest-api-1" options="-parameters" />
