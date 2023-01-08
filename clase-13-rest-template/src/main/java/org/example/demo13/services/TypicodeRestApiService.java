@@ -20,5 +20,4 @@ public class TypicodeRestApiService {
         List<String> response = restTemplate.getForObject(url, List.class);
         return response;
     }
-
 }

@@ -1,0 +1,10 @@
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/controllers/DomicilioController.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/models/entities/Cliente.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/Clase10Main.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/services/ClienteService.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/Repositories/DomicilioRepository.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/models/requests/requests/DomicilioRequest.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/models/requests/requests/ClienteRequest.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/controllers/ClienteControllerNico.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/Repositories/ClienteRepository.java
+/Users/phoenixm/IdeaProjects/java-coderhouse-41020/clase-10-rest-api-2/src/main/java/org/example/demo10/models/entities/Domicilio.java

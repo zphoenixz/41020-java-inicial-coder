@@ -1,0 +1,10 @@
+org/example/demo10/Repositories/DomicilioRepository.class
+org/example/demo10/services/ClienteService.class
+org/example/demo10/requests/ClienteRequest.class
+org/example/demo10/Clase10Main.class
+org/example/demo10/requests/DomicilioRequest.class
+org/example/demo10/entities/Cliente.class
+org/example/demo10/controllers/ClienteControllerNico.class
+org/example/demo10/entities/Domicilio.class
+org/example/demo10/Repositories/ClienteRepository.class
+org/example/demo10/controllers/DomicilioController.class
