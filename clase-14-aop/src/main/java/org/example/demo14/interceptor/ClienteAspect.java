@@ -17,10 +17,10 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 public class ClienteAspect {
 
     @Pointcut("execution(* org.example.demo14.controllers.ClienteControllerNico.*(..))")
-    public void log() {
+    public void logMethod() {
     }
 
-    @Before("log()")
+    @Before("logMethod()")
     public void doBefore(JoinPoint joinPoint) {
         System.out.println("LOG BEFORE POINT CUT===================================");
         //Obtenemos el objeto HttpServletRequest que tiene los datos relacionados en el request
@@ -32,9 +32,10 @@ public class ClienteAspect {
         //Obtenemos el nombre del metodo del request del objeto solicitado
         Object[] args = joinPoint.getArgs();     //Obtenemos los parametros del request del objeto solicitado
 //        RequestLog requestLog=new RequestLog(url,ip,classMethod,args);
-        System.out.println("Request : " + url + ip + classMethod);
-        System.out.println("IP : " + ip);
-        System.out.println("ClassMethod : " + classMethod);
+        System.out.println("Request: " + url + ip + classMethod);
+        System.out.println("IP: " + ip);
+        System.out.println("ClassMethod: " + classMethod);
+        System.out.println("args: " + args);
     }
 
     //Define como completar la ejecucion

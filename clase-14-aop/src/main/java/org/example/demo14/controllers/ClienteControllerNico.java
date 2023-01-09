@@ -33,7 +33,7 @@ public class ClienteControllerNico {
                 clienteRequest.getApellido(),
                 clienteRequest.getDni()
         );
-
+        System.out.println("Creando un cliente!");
 
         return ResponseEntity.ok(clienteRepository.save(clienteAGuardar));
     }
